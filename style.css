@@ -1,0 +1,65 @@
+/**  */
+/******  Basic styling */
+/**  */
+.carousel-items {
+	width : 100vw;
+	height: 100vh;
+}
+
+.carousel-items a {
+	position  : fixed;
+	top       : 0;
+	bottom    : 0;
+	left      : 0;
+	right     : 0;
+	transition: all 3s ease-in-out;
+}
+
+.carousel-items a:hover {
+	cursor: default;
+}
+
+.item-1 {
+	background: url("https://goo.gl/FsBt5c") no-repeat;
+}
+
+.item-2 {
+	background: url("https://goo.gl/W9yxG5") no-repeat;
+}
+
+.item-3 {
+	background: url("https://goo.gl/nqFmYl") no-repeat;
+}
+
+.item-1, .item-2, .item-3 {
+	background-size: cover;
+	opacity        : 0;
+}
+
+
+
+/**  */
+/******  The magic of carousel */
+/**  */
+[id^="target-item"] {
+	display: none;
+}
+
+/** Item1 should be there when the page is fully loaded */
+.item-1 {
+	opacity: 1;
+}
+
+/** when we start using Target links we need to display only what is choosen by the end user, so first hide item-1 */
+*:target ~ .item-1 {
+	opacity: 0;
+}
+
+#target-item-1:target ~ .item-1,
+#target-item-2:target ~ .item-2,
+#target-item-3:target ~ .item-3 {
+	opacity: 1;
+
+	/** we can use 1 instead of 100 but it adds a slightly cool effect with the transition property */
+	z-index: 100;
+}
