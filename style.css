@@ -12,7 +12,7 @@
 	bottom    : 0;
 	left      : 0;
 	right     : 0;
-	transition: all 2s ease-in-out;
+	transition: all 1s cubic-bezier(0, 1.99, 0.9,-0.29);
 }
 
 .carousel-items a:hover {
@@ -20,15 +20,15 @@
 }
 
 .item-1 {
-	background: url("https://goo.gl/FsBt5c") no-repeat;
+	background: url("img/img1.jpg") no-repeat;
 }
 
 .item-2 {
-	background: url("https://goo.gl/W9yxG5") no-repeat;
+	background: url("img/img2.jpg") no-repeat;
 }
 
 .item-3 {
-	background: url("https://goo.gl/nqFmYl") no-repeat;
+	background: url("img/img3.jpg") no-repeat;
 }
 
 .item-1, .item-2, .item-3 {
@@ -47,6 +47,8 @@
 
 /** Item1 should be there when the page is fully loaded */
 .item-1 {
+	/** This z-index will make the browser trigger the first anchor "a.item-1", because now nothing is higher than .item-1 */
+	z-index: 1;
 	opacity: 1;
 }
 
