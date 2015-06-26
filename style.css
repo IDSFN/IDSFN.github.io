@@ -1,8 +1,21 @@
-/**  */
+/** *****************************************************/
+/** Fonts */
+/* 
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'PT Serif', serif;
+	font-family: 'PT Sans', sans-serif; 
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700|PT+Serif);
+
+
+
+/** *****************************************************/
 /******  Basic styling */
 /**  */
 .carousel-items {
-	width : 100vw;
+	/** it doesn't matter, because we have big background images */
+	width: 100vw;
 	height: 100vh;
 }
 
@@ -20,15 +33,15 @@
 }
 
 .item-1 {
-	background: url("img/img1.jpg") no-repeat;
+	background: url("img/img1.jpg") no-repeat center center fixed;
 }
 
 .item-2 {
-	background: url("img/img2.jpg") no-repeat;
+	background: url("img/img2.jpg") no-repeat center center fixed;
 }
 
 .item-3 {
-	background: url("img/img3.jpg") no-repeat;
+	background: url("img/img3.jpg") no-repeat center center fixed;
 }
 
 .item-1, .item-2, .item-3 {
@@ -38,7 +51,7 @@
 
 
 
-/**  */
+/** *****************************************************/
 /******  The magic of carousel */
 /**  */
 [id^="target-item"] {
