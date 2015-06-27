@@ -8,7 +8,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700|PT+Serif);
 
-
+* {
+	box-sizing: border-box;
+}
 
 /** *****************************************************/
 /******  Basic styling */
@@ -45,6 +47,7 @@
 	background-size: cover;
 	opacity        : 0;
 }
+
 
 
 
@@ -97,16 +100,16 @@
 	text-transform: uppercase;
 	background-color: #F9E9D6;
 	color: #3F9388;
-	padding: 1% 3%;
-	margin-bottom: 1%;
+	padding: 0% 3%;
+	margin-bottom: 2%;
 }
 
 .leadingPage label {
 	font-family: 'PT Serif', serif;
-	font-size: 3em;
+	font-size: 4em;
 	background-color: #3F9388;
 	color: #F9E9D6;
-	padding: 1.25% 4%;
+	padding: 1.5% 4%;
 	position: absolute;
 	left: 50%;
 	bottom: -25%;
@@ -119,7 +122,7 @@
 	background-color: #F9E9D6;
 	color: #3F9388;
 	left: 50%;
-	bottom: -30%;
+	bottom: -35%;
 }
 
 .leadingPage label:hover + h1 span {
@@ -132,12 +135,17 @@
 	text-transform: uppercase;
 	white-space:nowrap;
 	display: inline-block;
-	transition: all 1.4s cubic-bezier(0.44, -0.45, 0, 1.03);
+	transition: all 0.6s cubic-bezier(0.44, -0.45, 0, 1.03);
 }
 
 @media (max-width: 520px) {
 	.leadingPage h1 span {
 		font-size: 1.2em;
+	}
+
+	.leadingPage label:hover {
+		left: 50%;
+		bottom: -45%;
 	}
 }
 
@@ -156,19 +164,133 @@
 	/** it's already covered by carousel items, but when we switch the items it apper */
 	z-index: -1;
 
-	/** Indeed we need to use only opacity, if so we need to sacrifice all our ontrols */
+	/** Indeed we need to use only opacity, if so we need to sacrifice all our other page ontrols */
 	opacity: 0;
-	transform: scale(0.5);
-	transition: all 0.8s cubic-bezier(0, 1.64, 0, 0.69) 0s;
+	-webkit-transform: scale(0.5);
+	        transform: scale(0.5);
+	transition: all 1s cubic-bezier(0, 1.64, 0, 0.69) 0s;
 }
 
 #overlayPop:checked ~ .overlay {
 	z-index: 4;
-	opacity: 0.8;
-	transform: scale(1);
+	opacity: 0.95;
+	-webkit-transform: scale(1);
+	        transform: scale(1);
 }
 
-.overlay label {
+.overlay #exit {
 	display: block;
 	height: 100%;
+}
+
+.overlay .subscribe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 4% 2%;
+	width: 100%;
+}
+
+#exitIC {
+	display: none;
+}
+
+.subscribe h1 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	margin-bottom: 0.3em;
+}
+
+.subscribe h3 {
+	font-family: 'PT Serif', serif;
+	font-size: 1.2em;
+	margin: 0;
+	opacity: 0.8;
+}
+
+.subscribe h1, .subscribe h3 {
+	color: #3F9388;
+}
+
+.subscribe p {
+	font-family: 'PT Sans', sans-serif;
+	opacity: 0.5;
+	margin-bottom: 3em;
+}
+
+.subscribe input {
+	width: 70%;
+	color: #fff;
+	padding: 0 2%;
+	background-color: #3F9388;
+	opacity: 0.6;
+}
+
+.subscribe button {
+	width: 28%;
+	text-transform: uppercase;
+	background-color: gray;
+}
+
+.subscribe input, .subscribe button {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	outline: none;
+	border: none;
+	height: 3em;
+	color: #fff;
+	transition: all 0.1s ease-in-out;
+}
+
+.subscribe input:hover {
+	opacity: 1;
+}
+
+.subscribe button:hover {
+	box-shadow: inset 1em 1em 8em  #3F9388;
+}
+
+@media (min-width: 620px) {
+	.overlay .subscribe {
+		padding: 2% 2%;
+		width: 90%;
+	}
+	.subscribe h1, .subscribe h3 {
+		white-space:nowrap;
+	}
+
+	.subscribe h1, .subscribe h3, .subscribe p {
+		max-width: 80%;
+	}
+
+	.subscribe #exitIC {
+		display: inline-block;
+		position: absolute;
+		top: -10%;
+		right: 0;
+		opacity: 0.6;
+		font-size: 1.5em;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.subscribe #exitIC:hover {
+		right: -1.25%;
+	}
+}
+
+@media (min-width: 800px) {
+	.overlay .subscribe {
+		padding: 2% 2%;
+		width: 70%;
+	}
+
+	.subscribe h1, .subscribe h3, .subscribe p {
+		max-width: 50%;
+	}
 }
