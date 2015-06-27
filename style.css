@@ -9,14 +9,16 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700|PT+Serif);
 
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /** *****************************************************/
 /******  Basic styling */
 /**  */
 .carousel-items a {
-	transition: all 1s cubic-bezier(0, 1.99, 0.9,-0.29);
+	-webkit-transition: all 1s cubic-bezier(0, 1.99, 0.9,-0.29);
+	        transition: all 1s cubic-bezier(0, 1.99, 0.9,-0.29);
 }
 
 .carousel-items a, .overlay {
@@ -89,7 +91,8 @@
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 	z-index: 3;
 	text-align: center;
 }
@@ -114,7 +117,8 @@
 	left: 50%;
 	bottom: -25%;
 	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
+	        -ms-transform: translateX(-50%);
+	    transform: translateX(-50%);
 	
 }
 
@@ -135,7 +139,8 @@
 	text-transform: uppercase;
 	white-space:nowrap;
 	display: inline-block;
-	transition: all 0.6s cubic-bezier(0.44, -0.45, 0, 1.03);
+	-webkit-transition: all 0.6s cubic-bezier(0.44, -0.45, 0, 1.03);
+	        transition: all 0.6s cubic-bezier(0.44, -0.45, 0, 1.03);
 }
 
 @media all and (max-width: 520px), (orientation: portrait) {
@@ -167,15 +172,18 @@
 	/** Indeed we need to use only opacity, if so we need to sacrifice all our other page ontrols */
 	opacity: 0;
 	-webkit-transform: scale(0.5);
-	        transform: scale(0.5);
-	transition: all 1s cubic-bezier(0, 1.64, 0, 0.69) 0s;
+	        -ms-transform: scale(0.5);
+	    transform: scale(0.5);
+	-webkit-transition: all 1s cubic-bezier(0, 1.64, 0, 0.69) 0s;
+	        transition: all 1s cubic-bezier(0, 1.64, 0, 0.69) 0s;
 }
 
 #overlayPop:checked ~ .overlay {
 	z-index: 4;
 	opacity: 0.95;
 	-webkit-transform: scale(1);
-	        transform: scale(1);
+	        -ms-transform: scale(1);
+	    transform: scale(1);
 }
 
 .overlay #exit {
@@ -188,7 +196,8 @@
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 	background-color: white;
 	padding: 4% 2%;
 	width: 100%;
@@ -254,11 +263,13 @@
 	outline: none;
 	border: none;
 	height: 3em;
-	transition: all 0.1s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	        transition: all 0.1s ease-in-out;
 }
 
 .subscribe input:hover {
-	box-shadow: inset 0.05em 0.05em 0.2em  #3F9388;
+	-webkit-box-shadow: inset 0.05em 0.05em 0.2em  #3F9388;
+	        box-shadow: inset 0.05em 0.05em 0.2em  #3F9388;
 }
 
 .subscribe button:hover {
@@ -270,7 +281,12 @@
 /** *****************************************************/
 /******  Some media queries */
 /**  */
-@media all and (max-width: 320px) ,(orientation: portrait) {
+@media all and (max-width: 320px), (max-width: 320px) and (orientation: portrait) {
+	.overlay .subscribe {
+		width: 100%;
+		background-color: red;
+	}
+
 	.subscribe input {
 		width: 100%;
 		margin-bottom: 0.5em;
@@ -282,13 +298,14 @@
 	}
 }
 
-@media all and (max-width: 420px) ,(orientation: portrait) {
+@media all and (max-width: 420px), (max-width: 420px) and (orientation: portrait) {
 	.subscribe p {
 		margin-bottom: 8em;
 	}
 }
 
-@media all and (min-width: 520px), (orientation: landscape) {
+@media all and (min-width: 520px), (min-width: 520px) and (orientation: landscape) {
+
 	.overlay .subscribe {
 		padding: 2% 2%;
 		width: 90%;
@@ -320,19 +337,22 @@
 		opacity: 0.6;
 		font-size: 1.5em;
 		-webkit-transform: scale(1);
-		        transform: scale(1);
+		        -ms-transform: scale(1);
+		    transform: scale(1);
 		cursor: pointer;
-		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		        transition: all 0.3s ease-in-out;
 	}
 
 	.subscribe #exitIC:hover {
 		-webkit-transform: scale(0.95);
-		        transform: scale(0.95);
+		        -ms-transform: scale(0.95);
+		    transform: scale(0.95);
 		right: -1.25%;
 	}
 }
 
-@media all and (min-width: 800px), (orientation: landscape) {
+@media all and (min-width: 800px), (min-width: 800px) and (orientation: landscape) {
 	.overlay .subscribe {
 		padding: 2% 2%;
 		width: 70%;
