@@ -308,7 +308,7 @@
 
 	.overlay .subscribe {
 		padding: 2% 2%;
-		width: 90%;
+		width: 100%;
 	}
 	.subscribe h1, .subscribe h3 {
 		white-space:nowrap;
@@ -355,7 +355,7 @@
 @media all and (min-width: 800px), (min-width: 800px) and (orientation: landscape) {
 	.overlay .subscribe {
 		padding: 2% 2%;
-		width: 70%;
+		width: 90%;
 	}
 
 	.subscribe h1, .subscribe h3, .subscribe p {
