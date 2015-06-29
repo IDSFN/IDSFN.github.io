@@ -1,0 +1,97 @@
+@import url("normalize.css");
+
+/** Section styling */
+/**  */
+section {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-color: #F9F4F0;
+	color: #0F0A06;
+	height: 100%;
+	padding: 4%;
+	transition: all 0.3s cubic-bezier(0, 1, 1,-0.39) 0.2s;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+p {
+
+}
+
+
+
+/** Sidebar styling */
+/**  */
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-color: #C4BDB6;
+	width: 30%;
+	height: 100%;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 5% 0 0 0;
+	padding: 0;
+}
+
+.sidebar li {
+	cursor: pointer;
+	margin-bottom: 1em;
+	padding: 8%;
+	color: #fff;
+	transition: all 0.5s ease-in-out;
+}
+
+.sidebar li:hover {
+	background-color: #DDD1C8;
+}
+
+
+
+/** label styling */
+/**  */
+input[type="checkbox"] {
+	display: none;
+}
+
+label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	font-size: 2em;
+	color: #C4BDB6;
+	cursor: pointer;
+	transition: all cubic-bezier(1, -0.43, 0, 1.7) 0.5s;
+}
+
+label:hover {
+	color: red;
+}
+
+#checkBtn:checked ~ section {
+	left: 30%;
+	transform: scale(0.9);
+}
+
+#checkBtn:checked ~ .sidebar {
+	z-index: 2;
+	opacity: 1;
+}
+
+#checkBtn:checked + label {
+	left: 31%;
+}
