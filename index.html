@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title>IDSFN | NEDAL KOUISSI</title>
+</head>
+<body>
+	
+	<!-- carousel items -->
+	<div class="carousel-items">
+
+		<!-- cuz i need to cycle through div.carousel-items, by using css selector ~ -->
+		<span id="target-item-1"></span>
+		<span id="target-item-2"></span>
+		<span id="target-item-3"></span>
+
+		<!-- each anchor point represent one item -->
+		<a href="#target-item-2" class="item-1"></a>
+		<a href="#target-item-3" class="item-2"></a>
+		<a href="#target-item-1" class="item-3"></a>
+	
+		<!-- Leading layer -->
+		<input type="checkbox" id="overlayPop">
+		<div class="leadingPage">
+			
+			<label for="overlayPop">Try it now</label>
+			<h1>
+				<span>We Heavily Breath</span><br />
+				<span>Art</span>
+			</h1>
+		</div>
+
+		<!-- Overlay layer -->
+		<div class="overlay">
+			<label for="overlayPop" id="exit"> </label>
+
+			<!-- subscription form -->
+			<div class="subscribe">
+				<label for="overlayPop" id="exit"> </label>
+				<label for="overlayPop" id="exitIC">&#10006;</label>
+				<h1>Lorem ipsum dolor sit.</h1>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magnam, perspiciatis quas?</p>
+
+				<div class="formBG">
+					<input type="email" placeholder="test@gmail.com">
+					<button>Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
