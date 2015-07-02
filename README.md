@@ -18,6 +18,7 @@ check the [official project repository].
 This is only projects preview:
 
 * [Registaa] - Simple email registeration website[Theme only]!
+* [SideBBar] - Simple Css experiment!
 
 <br />
 ###License
@@ -29,4 +30,5 @@ MIT
 **Free Software, Hell Yeah!**
 
 [Registaa]:http://idsfn.github.io/registaa/
+[SideBBar]:http://idsfn.github.io/SideBBar/
 [official project repository]:https://github.com/IDSFN/
