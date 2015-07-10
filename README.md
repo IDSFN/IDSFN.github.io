@@ -19,6 +19,7 @@ This is only projects preview:
 
 * [Registaa] - Simple email registeration website[Theme only]!
 * [SideBBar] - Simple Css experiment!
+* [Not Cool] - Turned to be boring!
 
 <br />
 ###License
@@ -31,4 +32,5 @@ MIT
 
 [Registaa]:http://idsfn.github.io/registaa/
 [SideBBar]:http://idsfn.github.io/SideBBar/
+[Not cool]:http://idsfn.github.io/Register/
 [official project repository]:https://github.com/IDSFN/
